@@ -1,0 +1,381 @@
+/* ===== ESTILOS PARA SECCIÓN LETSDEFEND ===== */
+
+.platform-section {
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(23, 42, 70, 0.9) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(4, 157, 217, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #049fd9, #00ff88, #049fd9);
+    animation: shimmer 3s infinite;
+}
+
+.platform-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.platform-title i {
+    color: #00ff88;
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+.platform-description {
+    text-align: center;
+    color: #b0b8c5;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
+}
+
+/* Contenedor de insignias LetsDefend */
+.letsdefend-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Tarjetas de insignias */
+.badge-card {
+    background: linear-gradient(145deg, rgba(15, 32, 55, 0.95) 0%, rgba(25, 45, 75, 0.95) 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(4, 157, 217, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.badge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(4, 157, 217, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.badge-card:hover::before {
+    left: 100%;
+}
+
+.badge-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(4, 157, 217, 0.5);
+    box-shadow: 0 15px 35px rgba(4, 157, 217, 0.2);
+}
+
+/* Icono de la insignia */
+.badge-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #049fd9 0%, #00ff88 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #0a192f;
+    box-shadow: 0 8px 20px rgba(4, 157, 217, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.badge-card:hover .badge-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Contenido de la insignia */
+.badge-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.badge-description {
+    color: #b0b8c5;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+/* Metadatos de la insignia */
+.badge-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.badge-platform {
+    background: rgba(4, 157, 217, 0.2);
+    color: #049fd9;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(4, 157, 217, 0.3);
+}
+
+.badge-level {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+/* Habilidades de la insignia */
+.badge-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.badge-skill {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e6f0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.badge-card:hover .badge-skill {
+    background: rgba(4, 157, 217, 0.2);
+    color: #049fd9;
+    border-color: rgba(4, 157, 217, 0.3);
+}
+
+/* CTA de la plataforma */
+.platform-cta {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(10, 25, 47, 0.6);
+    border-radius: 16px;
+    border: 1px solid rgba(4, 157, 217, 0.2);
+}
+
+.platform-cta p {
+    color: #b0b8c5;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+    color: #0a192f;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+    color: #0a192f;
+}
+
+/* Efectos de brillo y animaciones */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Efectos de partículas para fondo (opcional) */
+.badge-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(4, 157, 217, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.badge-card:hover::after {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .platform-section {
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+    }
+    
+    .platform-title {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .letsdefend-badges {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .badge-card {
+        padding: 1.5rem;
+    }
+    
+    .badge-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .badge-content h4 {
+        font-size: 1.2rem;
+    }
+    
+    .badge-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .platform-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .platform-title {
+        font-size: 1.5rem;
+    }
+    
+    .platform-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .badge-card {
+        padding: 1.2rem;
+    }
+    
+    .badge-skills {
+        justify-content: center;
+    }
+}
+
+/* Efectos de iluminación para tarjetas específicas */
+.badge-card:nth-child(1) .badge-icon {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+}
+
+.badge-card:nth-child(2) .badge-icon {
+    background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+}
+
+.badge-card:nth-child(3) .badge-icon {
+    background: linear-gradient(135deg, #f0932b 0%, #ffbe76 100%);
+}
+
+.badge-card:nth-child(4) .badge-icon {
+    background: linear-gradient(135deg, #6ab04c 0%, #badc58 100%);
+}
+
+.badge-card:nth-child(5) .badge-icon {
+    background: linear-gradient(135deg, #e056fd 0%, #be2edd 100%);
+}
+
+/* Indicador de estado activo */
+.badge-card.active {
+    border-color: #00ff88;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.badge-card.active .badge-icon {
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(4, 157, 217, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(4, 157, 217, 0.8);
+    }
+}
+
+/* Efecto de gradiente animado para el título de plataforma */
+.platform-title {
+    background: linear-gradient(90deg, #049fd9, #00ff88, #049fd9);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s linear infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
