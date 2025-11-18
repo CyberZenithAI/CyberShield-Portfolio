@@ -6,8 +6,8 @@
 
 **¡Alto ahí! ¿Buscas un profesional que combine habilidades técnicas excepcionales con una mentalidad estratégica en ciberseguridad?**
 
-[![Visitar Portafolio](https://img.shields.io/badge/🚀_Visitar_Portafolio-Click_Here-blue?style=for-the-badge)](https://tuusuario.github.io)
-[![LinkedIn](https://img.shields.io/badge/💼_Conectar_En_LinkedIn-Connect_Now-0077B5?style=for-the-badge)](https://linkedin.com/in/tuperfil)
+[![Visitar Portafolio](https://img.shields.io/badge/🚀_Visitar_Portafolio-Click_Here-blue?style=for-the-badge)](https://cyberzenithai.github.io/CyberShield-Portfolio/)
+[![LinkedIn](https://img.shields.io/badge/💼_Conectar_En_LinkedIn-Connect_Now-0077B5?style=for-the-badge)](https://linkedin.com/in/joaquin_ocampo_cibersecurity)
 
 </div>
 
