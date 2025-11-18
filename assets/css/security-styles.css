@@ -1,0 +1,402 @@
+/* Estilos de Seguridad Avanzada */
+.security-alert {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid #c23616;
+    animation: pulse-alert 2s infinite;
+}
+
+@keyframes pulse-alert {
+    0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+}
+
+.honeypot-field {
+    position: absolute !important;
+    left: -9999px !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+.security-shield {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    z-index: 10000;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.lockdown-mode {
+    filter: grayscale(1) blur(2px);
+    pointer-events: none;
+}
+
+.encryption-indicator {
+    background: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+/* Indicadores de seguridad en tiempo real */
+.security-status {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #2ecc71;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    z-index: 10000;
+}
+
+.threat-level-low { color: #2ecc71; }
+.threat-level-medium { color: #f39c12; }
+.threat-level-high { color: #e74c3c; }
+
+/* ===== ESTILOS PARA VALIDACIÓN MEJORADA v1.1 ===== */
+.error-field {
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1) !important;
+    background-color: rgba(231, 76, 60, 0.02) !important;
+}
+
+.security-warning-field {
+    border-color: #f39c12 !important;
+    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.1) !important;
+    background-color: rgba(243, 156, 18, 0.02) !important;
+}
+
+.field-error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+    animation: slideDown 0.3s ease;
+    font-weight: 500;
+    padding: 3px 0;
+}
+
+.security-warning-message {
+    color: #f39c12;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    animation: slideDown 0.3s ease;
+    font-weight: 500;
+    padding: 3px 0;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid #219653;
+    animation: slideDown 0.5s ease;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Indicadores de estado en tiempo real */
+.validation-status {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+}
+
+.valid-status {
+    color: #2ecc71;
+}
+
+.invalid-status {
+    color: #e74c3c;
+}
+
+/* Loader de seguridad */
+.security-loader {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== MEJORAS ADICIONALES v1.1 ===== */
+
+/* Efectos de transición para todos los campos */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estados de enfoque mejorados */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(4, 157, 217, 0.15) !important;
+}
+
+/* Contador de caracteres en tiempo real */
+.char-counter {
+    font-size: 0.75rem;
+    text-align: right;
+    margin-top: 5px;
+    color: #b0b8c5;
+    transition: color 0.3s ease;
+}
+
+.char-counter.warning {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.char-counter.danger {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+/* Botones de formulario con estados mejorados */
+.btn-submit {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+/* Indicadores de progreso de seguridad */
+.security-progress {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.security-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #3498db);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.security-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Modo oscuro para alertas de seguridad */
+.dark-security-alert {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+    border-left: 4px solid #e74c3c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .security-status {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        font-size: 0.7rem;
+        padding: 8px;
+    }
+    
+    .security-shield {
+        top: 10px;
+        right: 10px;
+        font-size: 0.6rem;
+        padding: 8px 12px;
+    }
+    
+    .field-error-message,
+    .security-warning-message {
+        font-size: 0.75rem;
+    }
+    
+    .success-message {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animaciones de entrada para mensajes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Efectos de partículas para fondo de seguridad */
+.security-bg-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Estados de carga mejorados */
+.loading-state {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading-state::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+}
+
+/* Tooltips de seguridad */
+.security-tooltip {
+    position: absolute;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.3s ease;
+}
+
+.security-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #2c3e50;
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .security-alert,
+    .success-message,
+    .field-error-message,
+    .security-warning-message,
+    .btn-submit,
+    .security-shield {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Alto contraste para mejor accesibilidad */
+@media (prefers-contrast: high) {
+    .error-field {
+        border-width: 3px !important;
+    }
+    
+    .security-warning-field {
+        border-width: 3px !important;
+    }
+    
+    .security-alert {
+        border-left-width: 6px;
+    }
+    
+    .success-message {
+        border-left-width: 6px;
+    }
+}
+
+/* Modo impresión */
+@media print {
+    .security-shield,
+    .security-status,
+    .honeypot-field {
+        display: none !important;
+    }
+}
