@@ -1,0 +1,12 @@
+/* Estilo opcional para el botón del blog */
+.blog-btn {
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.blog-btn:hover {
+    background: linear-gradient(135deg, #9d50bb, #6e48aa);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(157, 80, 187, 0.4);
+}
