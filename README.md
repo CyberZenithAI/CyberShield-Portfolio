@@ -1,4 +1,4 @@
-🔒 CyberShield-Portfolio | Junior Cybersecurity Analyst 8.5/10
+🔒 CyberShield-Portfolio | Junior Cybersecurity Analyst
 
 # 🛡️ Portafolio de Ciberseguridad | Analista Junior SOC & Ethical Hacking
 
