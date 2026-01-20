@@ -18,7 +18,7 @@
 
 ### 🎯 **Resultados Comprobados que Ofrezco:**
 
-- **🔍 Threat Detection 8.5/10** - Identificación de vulnerabilidades OWASP Top 10
+- **🔍 Threat Detection** - Identificación de vulnerabilidades OWASP Top 10
 - **🤖 Security Automation** - Scripting que reduce MTTR en 40%
 - **🕵️ Digital Forensics** - Análisis IOC/IOA con herramientas enterprise
 - **🌐 OSINT & Threat Intel** - Intelligence aplicada a casos reales
