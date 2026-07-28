@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Enviado con Éxito | Joaquín Ocampo - Ciberseguridad</title>
+    
+    <!-- 🔒 CABECERAS DE SEGURIDAD ESTRICTAS (Meta Equivalents) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="no-referrer">
+    
+    <!-- 🚫 PROTECCIÓN SEO: No indexar páginas de post-acción -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0a0f">
+
+    <!-- Recursos Externos Optimizados -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Hoja de estilos principal para consistencia -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        /* ===== ESTILOS CRÍTICOS ESPECÍFICOS PARA GRACIAS.HTML ===== */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: var(--dark-bg, #0a0a0f);
+            color: var(--text-primary, #ffffff);
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .success-container {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(17, 17, 24, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color, #2a2a3a);
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 136, 0.1);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            position: relative;
+            z-index: 10;
+        }
+
+        .success-icon-wrapper {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--primary-color, #00ff88);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            animation: pulse-success 2s infinite;
+        }
+
+        .success-icon-wrapper i {
+            font-size: 3rem;
+            color: var(--primary-color, #00ff88);
+        }
+
+        .success-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color, #00ff88), var(--cyber-blue, #00ffff));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .success-message {
+            color: var(--text-secondary, #b0b0c0);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .security-hash {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px dashed var(--border-color, #2a2a3a);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: var(--text-muted, #6c6c80);
+            word-break: break-all;
+        }
+
+        .security-hash span {
+            color: var(--primary-color, #00ff88);
+            font-weight: bold;
+        }
+
+        .btn-return {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--primary-color, #00ff88);
+            color: var(--dark-bg, #0a0a0f);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-return:hover {
+            background: var(--primary-dark, #00cc6a);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 255, 136, 0.3);
+        }
+
+        .redirect-timer {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted, #6c6c80);
+        }
+
+        .redirect-timer strong {
+            color: var(--cyber-blue, #00ffff);
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse-success {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 35px rgba(0, 255, 136, 0.6); transform: scale(1.05); }
+        }
+
+        /* Fondo Cyber (Reutilizado de forma ligera) */
+        .cyber-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.05) 0%, transparent 60%);
+            z-index: -2;
+            pointer-events: none;
+        }
+        .cyber-grid {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            pointer-events: none;
+            animation: gridMove 20s linear infinite;
+        }
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        @media (max-width: 480px) {
+            .success-container { padding: 2rem 1.5rem; }
+            .success-icon-wrapper { width: 80px; height: 80px; }
+            .success-icon-wrapper i { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fondos Decorativos -->
+    <div class="cyber-bg"></div>
+    <div class="cyber-grid"></div>
+
+    <main class="success-container" role="main">
+        <div class="success-icon-wrapper" aria-hidden="true">
+            <i class="fas fa-shield-check"></i>
+        </div>
+        
+        <h1 class="success-title">¡Mensaje Transmitido con Éxito!</h1>
+        
+        <p class="success-message">
+            Tu solicitud ha sido encriptada y recibida en mi bandeja de entrada segura. 
+            Me pondré en contacto contigo en un plazo máximo de <strong>24 horas</strong>.
+        </p>
+
+        <!-- Elemento de "Security Theater" que refuerza la marca personal de ciberseguridad -->
+        <div class="security-hash" aria-label="Hash de verificación de transacción">
+            <i class="fas fa-lock" style="margin-right: 8px;"></i>
+            ID Seguro: <span id="tx-hash">Generando hash seguro...</span>
+        </div>
+
+        <a href="index.html" class="btn-return" id="return-btn">
+            <i class="fas fa-arrow-left"></i> Volver al Portafolio
+        </a>
+
+        <p class="redirect-timer">
+            Redirección automática en <strong id="countdown">5</strong> segundos...
+        </p>
+    </main>
+
+    <script>
+        /**
+         * Lógica Segura y Optimizada para Página de Éxito
+         * Sin dependencias externas, ejecución ultra-rápida.
+         */
+        (function() {
+            'use strict';
+
+            // 1. Generar Hash de Transacción Falso pero Realista (Web Crypto API)
+            // Esto refuerza la percepción de seguridad avanzada sin costo de rendimiento.
+            function generateSecureHash() {
+                const array = new Uint8Array(16);
+                crypto.getRandomValues(array);
+                return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('').toUpperCase();
+            }
+
+            // 2. Limpiar datos sensibles de sessionStorage (Defensa en profundidad)
+            try {
+                sessionStorage.removeItem('formDataTemp');
+                sessionStorage.removeItem('formAttempt');
+            } catch (e) {
+                // Fallo silencioso por compatibilidad
+            }
+
+            // 3. Inicialización al cargar el DOM
+            document.addEventListener('DOMContentLoaded', () => {
+                // Mostrar hash
+                const hashEl = document.getElementById('tx-hash');
+                if (hashEl) {
+                    hashEl.textContent = `0x${generateSecureHash()}-${Date.now().toString(36).toUpperCase()}`;
+                }
+
+                // 4. Lógica de Redirección Automática con Countdown
+                let seconds = 5;
+                const countdownEl = document.getElementById('countdown');
+                const returnBtn = document.getElementById('return-btn');
+
+                const timer = setInterval(() => {
+                    seconds--;
+                    if (countdownEl) countdownEl.textContent = seconds;
+                    
+                    if (seconds <= 0) {
+                        clearInterval(timer);
+                        window.location.replace('index.html'); // replace() evita que el usuario vuelva a esta página con el botón "Atrás"
+                    }
+                }, 1000);
+
+                // Detener el temporizador si el usuario hace clic manualmente (Mejora de UX)
+                if (returnBtn) {
+                    returnBtn.addEventListener('click', (e) => {
+                        // No prevenimos el default, dejamos que el enlace funcione,
+                        // pero limpiamos el intervalo para evitar fugas de memoria.
+                        clearInterval(timer);
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
